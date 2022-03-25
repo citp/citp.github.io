@@ -1,7 +1,32 @@
-<body> Redirecting to the survey... </body>
-<script>
-  var params = document.location.search.substring(1).split("&");
-  var surveyId = params.filter(param => param.startsWith("surveyId="))[0];
-  var timezone = params.filter(param => param.startsWith("timezone="))[0];
-  document.location.href = 'https://princetonsurvey.az1.qualtrics.com/jfe/form/SV_6hwhPMifY1gOdx4?' + surveyId + "&" + timezone;
-</script>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Princeton Survey - Thank you</title>
+    <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Poppins:light">
+    <style>
+      body{
+        width: 770px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5%
+      }
+      .msg {
+        font-family: 'Poppins', light;
+        font-size: 20px;
+        text-justify: left;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="logo.png"/>
+    <p class="msg">Redirecting to the survey...</p>
+  </body>
+  <script>
+    var params = document.location.search.substring(1).split("&");
+    var surveyId = params.filter(param => param.startsWith("surveyId="))[0];
+    var timezone = params.filter(param => param.startsWith("timezone="))[0];
+    document.location.href = 'https://princetonsurvey.az1.qualtrics.com/jfe/form/SV_6hwhPMifY1gOdx4?' + surveyId + "&" + timezone;
+  </script>
+</html>
+
